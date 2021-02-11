@@ -1,7 +1,8 @@
 #include <iostream>
-#include "Vector.h"
 #include <iterator>
-#include "fibersapi.h"
+
+//#include "Vector.h"
+#include "List.h"
 
 using namespace std;
 
@@ -21,14 +22,6 @@ void elePrinter(T arr, int size){
 
 int main(){
     int arr[7] = {5,1,3,2,7,4,8};
-    Vector<int> V(0, 7, 0);
-
-    for (int i = 0; i < 7; i++){
-        V.insert(i, arr[i]);
-    }
-
-    V.sort(0, V.size());
-    elePrinter(V, V.size());
 
     return 0;
 }
