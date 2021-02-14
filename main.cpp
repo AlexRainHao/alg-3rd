@@ -14,14 +14,20 @@ void elePrinter(T &V){
 
 template <class T>
 void elePrinter(T arr, int size){
-    for (int i = 0; i < size; i++)
-        cout << arr[i] << ", ";
-    cout << endl;
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << ", " << std::flush;
+    }
 }
 
 
 int main(){
     int arr[7] = {5,1,3,2,7,4,8};
+    List<int> l;
 
-    return 0;
+    for (auto a: arr){
+        l.insertTail(a);
+    }
+
+    l.sort();
+    elePrinter(l, l.size());
 }

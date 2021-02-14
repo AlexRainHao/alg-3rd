@@ -5,7 +5,6 @@
 #ifndef PRACTICE_LISTNODE_H
 #define PRACTICE_LISTNODE_H
 
-typedef Rank int;
 #define ListNodePosi(T) ListNode<T>*
 
 template <typename T>
@@ -23,7 +22,7 @@ struct ListNode{
 
 template<typename T>
 ListNodePosi(T) ListNode<T>::insertAfter(const T &e) {
-    ListNodePosi(T) p = new ListNode(e, pred, succ);
+    ListNodePosi(T) p = new ListNode(e, this, succ);
     succ->pred = p;
     succ = p;
     return p;
@@ -31,7 +30,7 @@ ListNodePosi(T) ListNode<T>::insertAfter(const T &e) {
 
 template<typename T>
 ListNodePosi(T) ListNode<T>::insertPred(const T &e) {
-    ListNodePosi(T) p = new ListNode(e, pred, succ);
+    ListNodePosi(T) p = new ListNode(e, pred, this);
     pred->succ = p;
     pred = p;
     return p;
