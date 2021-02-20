@@ -2,7 +2,9 @@
 #include <iterator>
 
 //#include "Vector.h"
-#include "List.h"
+//#include "List.h"
+#include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
@@ -20,14 +22,11 @@ void elePrinter(T arr, int size){
 }
 
 
-int main(){
-    int arr[7] = {5,1,3,2,7,4,8};
-    List<int> l;
+int main() {
+    int arr[7] = {5, 1, 3, 2, 7, 4, 8};
+//    Stack<int> s(arr, 7);
+    Queue<int> q(arr, 7);
+    cout << q.dequeue() << endl;
+    cout << q.front() << endl;
 
-    for (auto a: arr){
-        l.insertTail(a);
-    }
-
-    l.sort();
-    elePrinter(l, l.size());
 }

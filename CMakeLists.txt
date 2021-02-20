@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 #aux_source_directory(. SRC_LIST) #搜索当前目录下的所有.cpp文件
 
-include_directories(Vector Utils List)
+include_directories(Vector Utils List Stack Queue)
 add_executable(practice main.cpp)
