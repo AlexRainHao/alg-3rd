@@ -2,6 +2,7 @@
 #include <iterator>
 #include "Vector.h"
 #include "List.h"
+#include "binNode.h"
 
 using namespace std;
 

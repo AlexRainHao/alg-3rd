@@ -66,7 +66,7 @@ public:
     T remove(ListNodePosi(T) p);
 
     void merge(List<T>& L){
-        merge(head(), size, L, L.head(), L._size);
+        merge(head(), size(), L, L.head(), L._size);
     }
     void sort(ListNodePosi(T) p, int n);
     void sort(){ return sort(head(), _size); }
@@ -75,7 +75,7 @@ public:
     int uniquify(); // unify for sorted one
     void reverse();
 
-    void traverse(void (*)(T&))
+    void traverse(void (*)(T&));
     template<typename VST> void traverse(VST&);
 };
 
