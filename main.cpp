@@ -1,8 +1,9 @@
 #include <iostream>
 #include <iterator>
 #include "Vector.h"
-#include "List.h"
-#include "binNode.h"
+//#include "List.h"
+//#include "Stack.h"
+#include "binTree.h"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ void elePrinter(T arr, int size){
 
 int main(){
     int arr[7] = {5,1,3,2,7,4,8};
+
     Vector<int> V(0, 7, 0);
 
     for (int i = 0; i < 7; i++){

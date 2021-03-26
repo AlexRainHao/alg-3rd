@@ -19,7 +19,7 @@ public:
         this->insert(this->size(), e);
     }
     T pop(){
-        return remove(this->size() - 1);
+        return (this->size() - 1);
     }
     T& top(){
         return (*this)[this->size() - 1];
