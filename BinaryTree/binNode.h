@@ -252,7 +252,7 @@ void tranPost_V1(BinNodePosi(T) x, VST& visit){
 template<typename T>
 template<typename VST>
 void BinNode<T>::travPre(VST &visit) {
-    travPost_R(this, visit);
+    travPre_R(this, visit);
 }
 
 template<typename T>
