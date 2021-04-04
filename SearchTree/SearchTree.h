@@ -72,5 +72,46 @@ bool BST<T>::remove(const T &e) {
     return true;
 }
 
+template<typename T>
+BinNodePosi(T) BST<T>::connect34(BinNode<T> *a, BinNode<T> *b, BinNode<T> *c,
+        BinNode<T> *T0, BinNode<T> *T1, BinNode<T> *T2, BinNode<T> *T3) {
+
+    a->lChild = T0; if (T0) T0->parent = a;
+    a->rChild = T1; if (T1) T1->parent = a;
+    updateHeight(a);
+
+    c->lChild = T2; if (T2) T2->parent = c;
+    c->rChild = T3; if (T3) T3->parent = c;
+    updateHeight(c);
+
+    b->lChild = a; a->parent = b;
+    b->rChild = c; c->parent = b;
+    updateHeight(b);
+
+    return b;
+}
+
+template<typename T>
+BinNodePosi(T) BST<T>::retateAt(BinNodePosi(T) v) {
+    BinNodePosi(T) p = v->parent; BinNodePosi(T) g = p->parent;
+
+    if (IsLChild(*p))
+        if (IsLChild(*v)){
+            p->parent = g->parent;
+            return connect34(v, p, g, v->lChild, v->rChild, p->rChild, g->rChild);
+        } else {
+            v->parent = g->parent;
+            return connect34(p, v, g, p->lChild, v->rChild, v->rChild, g->rChild);
+        }
+
+    else
+        if (IsRChild(*v)) {
+            p->parent = g->parent;
+            return connect34(g, p, v, g->lChild, p->lChild, v->lChild, v->rChild);
+        } else {
+            return connect34(g, v, p, g->lChild, v->lChild, v->rChild, p-rChild);
+        }
+}
+
 
 #endif //PRACTICE_SEARCHTREE_H

@@ -58,7 +58,7 @@ public:
     void BFS(int, int&);
     void dfs(int); //深度优先搜索
     void DFS(int, int&);
-    std::stack<Tv>* tSort(int); //DFS的拓扑排序
+    std::stack<Tv>*tSort(int); //DFS的拓扑排序
     bool TSort(int, std::stack<Tv>* S);
     void bcc(int); //DFS的双连通分量分解
     void BCC(int, int&, std::stack<int>&);
