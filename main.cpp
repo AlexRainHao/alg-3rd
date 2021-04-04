@@ -3,9 +3,7 @@
 #include "Vector.h"
 //#include "List.h"
 //#include "Stack.h"
-#include "binTree.h"
-
-
+#include "SearchTree.h"
 using namespace std;
 
 template <class T>
