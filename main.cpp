@@ -3,8 +3,7 @@
 #include "Vector.h"
 //#include "List.h"
 //#include "Stack.h"
-#include "SearchTree.h"
-#include "AVL.h"
+#include "Splay.h"
 using namespace std;
 
 template <class T>
